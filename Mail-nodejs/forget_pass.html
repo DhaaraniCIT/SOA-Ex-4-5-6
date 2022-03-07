@@ -1,0 +1,71 @@
+<!doctype html>
+<html class="no-js " lang="en">
+<head>
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Rancho&display=swap" rel="stylesheet">
+	<title>loginnn</title>
+ 	<link rel="stylesheet" href="style.css">
+ 	<style>
+		#alert
+		{
+			display:none;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container mt-4">
+		<div class="row">
+			<div class="col-lg-4 offset-lg-4" id="alert">
+				<div class="alert alert-success">
+					<strong id="result">
+						Password Changed Successfully, <a href="http://127.0.0.1:3000">Click here</a> to login
+					</strong>
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-lg-4 offset-lg-4 bg-light rounderd" id="reset-box">
+				<h2 class="text-center mt-2">Reset Password</h2>
+				<form class="p-2" id="forget-form">
+					<!-- <div class="form-group">
+						<small class="text-muted" >
+						To Reset ur Password enter your email we will send you the new pasasword
+						</small>
+					</div> -->
+					<div class="form-group">
+						<input type="password" name="email" class="form-control" placeholder="Password" required>
+					</div>
+					<div class="form-group">
+						<input type="password" name="mail" class="form-control" placeholder="Conform password" required>
+					</div>
+					<div class="form-group">
+						<input type="text" name="fail" class="form-control" placeholder="OTP" required>
+					</div>
+					<div class="form-group">
+						<input type="submit" name="forget" id="forget" value="reset" class="p-10 btn btn-primary btn-block">
+					</div>
+					<!-- <div class="form-group text-center">
+						<a href="" id="back-btn">back</a>
+					</div> -->
+				</form>
+			</div>
+        </div>			
+	</div>	
+	<script  src="https://code.jquery.com/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha256-sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI=" crossorigin="anonymous"></script>
+	<script>
+		$(document).ready(function(){
+			$("#forget").click(function(e){
+				e.preventDefault();
+				$("#alert").show();
+			})
+			
+		});
+	</script>
+</body>
+</html>
